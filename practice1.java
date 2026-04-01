@@ -54,6 +54,16 @@ public class practice1 {
             System.out.println(name + " moos!");
         }               
     }
+    static class crow extends Animal {
+     crow(String name) {
+            super(name);
+        }
+
+        @Override
+        void speak() {
+            System.out.println(name + " caws!");
+        }               
+    }
 
     // main directly in practice1, not inside another class
     public static void main(String[] args) {
@@ -62,11 +72,12 @@ public class practice1 {
         Cat c = new Cat("Whiskers");
         duck u = new duck("Daffy");
         cow o = new cow("Bessie");
-
+            crow r = new crow("Crowley");
         a.speak();
         d.speak();
         c.speak();
         u.speak();
         o.speak();
+        r.speak();
     }
 }
