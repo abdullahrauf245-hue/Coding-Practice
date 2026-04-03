@@ -8,6 +8,9 @@ public class ImplementationInheritance {
     static class Dog extends Animal {
         // breathe() inherited as-is, no need to rewrite
     }
+    static class cat extends Animal {
+        // breathe() inherited as-is, no need to rewrite
+    }
 
     public static void main(String[] args) {
         Dog d = new Dog();
