@@ -18,10 +18,19 @@ public class InterfaceInheritance {
         @Override
         double area() { return Math.PI * radius * radius; }
     }
+
+    static class Square extends Shape {
+        double side;
+        Square(double s) { side = s; }
+
+        @Override
+        double area() { return side * side; }
+    }
     public static void main(String[] args) {
         Triangle t = new Triangle(6, 4);
         System.out.println("Area: " + t.area());
         Circle c = new Circle(5);
+        Square s = new Square(3);
         System.out.println("Area: " + c.area());
     }
 }
