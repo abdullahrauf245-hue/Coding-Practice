@@ -26,11 +26,22 @@ public class InterfaceInheritance {
         @Override
         double area() { return side * side; }
     }
+
+                static class Rectangle extends Shape{
+                    double length;
+                    double breadth;
+                    Rectangle(double l, double b) { length = l; breadth = b; }
+
+                    @Override
+                    double area() { return length * breadth; }
+    }
     public static void main(String[] args) {
         Triangle t = new Triangle(6, 4);
         System.out.println("Area: " + t.area());
         Circle c = new Circle(5);
         Square s = new Square(3);
+        Rectangle r = new Rectangle(4, 5);
         System.out.println("Area: " + c.area());
+        
     }
 }
