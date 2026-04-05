@@ -13,11 +13,9 @@ public class UpcastingDemo {
 
     public static void main(String[] args) {
         Dog d = new Dog();
-        Animal a = d;  // upcasting — automatic, no cast needed
+        Animal a = d;  // upcasting 
 
-        a.breathe();   // works — Animal has breathe()
-        // a.fetch();  // COMPILE ERROR — Animal ref can't see fetch()
-
+        a.breathe();   
         System.out.println(a instanceof Dog);  // true — still a Dog under the hood
     }
 }
