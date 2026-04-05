@@ -9,14 +9,18 @@ public class InstanceofExample {
 static class Bird extends Animal {
         void fly() { System.out.println("Flying!"); }
     }
-    public static void main(String[] args) {
-        Animal a = new Dog();
 
-        System.out.println(a instanceof Dog);     // true
+    static class cow extends Animal{
+        void moo(){System.out.println("Mooing!");}
+    }
+    public static void main(String[] args) {
+        Animal a = new cow();
+
+        System.out.println(a instanceof Dog);     // false
         System.out.println(a instanceof Animal);  // true
         System.out.println(a instanceof Cat);     // false
         System.out.println(a instanceof Bird);     // false
-
+        System.out.println(a instanceof cow);     // true
         if (a instanceof Dog) {
             Dog d = (Dog) a;
             d.fetch();
