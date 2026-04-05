@@ -15,8 +15,13 @@ static class Bike extends Vehicle {
             System.out.println("Ringing bell on Bike!");
         }
     }
+    static class Truck extends Vehicle {
+        void loadCargo() {
+            System.out.println("Loading cargo in Truck!");
+        }
+    }
     public static void main(String[] args) {
-        Vehicle v = new Car();
+        Vehicle v = new Truck();
 
         v.start();
 
@@ -29,6 +34,12 @@ static class Bike extends Vehicle {
             b.ringBell();
         } else {
             System.out.println("v is not an instance of Bike, cannot ring bell.");
+        }
+        if (v instanceof Truck) {
+            Truck t = (Truck) v;
+            t.loadCargo();
+        } else {
+            System.out.println("v is not an instance of Truck, cannot load cargo.");
         }
     }
 }
