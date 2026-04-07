@@ -23,11 +23,18 @@ public class FinalMethodDemo {
         }
     }   
 
+    static class BusinessAccount extends BankAccount {
+        BusinessAccount(double balance) {
+            super(balance);
+        }
+    }
+
     public static void main(String[] args) {
         SavingsAccount sa = new SavingsAccount(5000.0);
         System.out.println("Balance: " + sa.getBalance());
         CheckingAccount ca = new CheckingAccount(10000.0);
         System.out.println("Balance: " + ca.getBalance());
-
+        BusinessAccount ba = new BusinessAccount(20000.0);
+        System.out.println("Balance: " + ba.getBalance());
     }
 }
