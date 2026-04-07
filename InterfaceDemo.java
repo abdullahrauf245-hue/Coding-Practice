@@ -25,6 +25,23 @@ public class InterfaceDemo {
         }
     }
 
+    static class Image implements Printable, Saveable {
+        String filename;
+
+        Image(String filename) {
+            this.filename = filename;
+        }
+
+        @Override
+        public void print() {
+            System.out.println("Printing image: " + filename);
+        }
+    
+       @Override
+        public void save() {
+            System.out.println("Saving image: " + filename);
+        }}
+
     public static void main(String[] args) {
         Document doc = new Document("OOP Notes");
         doc.print();
