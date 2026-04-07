@@ -29,6 +29,12 @@ public class FinalMethodDemo {
         }
     }
 
+static class InvalidAccount extends BankAccount {
+        InvalidAccount(double balance) {
+            super(balance);
+        }
+    }
+
     public static void main(String[] args) {
         SavingsAccount sa = new SavingsAccount(5000.0);
         System.out.println("Balance: " + sa.getBalance());
@@ -36,5 +42,7 @@ public class FinalMethodDemo {
         System.out.println("Balance: " + ca.getBalance());
         BusinessAccount ba = new BusinessAccount(20000.0);
         System.out.println("Balance: " + ba.getBalance());
+            InvalidAccount ia = new InvalidAccount(30000.0);
+        System.out.println("Balance: " + ia.getBalance());
     }
 }
