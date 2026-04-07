@@ -17,8 +17,17 @@ public class FinalMethodDemo {
         }
     }
 
+    static class CheckingAccount extends BankAccount {
+        CheckingAccount(double balance) {
+            super(balance);
+        }
+    }   
+
     public static void main(String[] args) {
         SavingsAccount sa = new SavingsAccount(5000.0);
         System.out.println("Balance: " + sa.getBalance());
+        CheckingAccount ca = new CheckingAccount(10000.0);
+        System.out.println("Balance: " + ca.getBalance());
+
     }
 }
