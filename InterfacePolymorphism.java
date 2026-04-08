@@ -27,6 +27,12 @@ public class InterfacePolymorphism {
         }
     }
 
+    static class ukulele implements Playable {
+        public void play() {
+            System.out.println("Strumming the Ukulele!");
+        }
+    }
+
     public static void main(String[] args) {
         Guitar g = new Guitar();
         g.play();
@@ -38,6 +44,8 @@ public class InterfacePolymorphism {
         v.play();
         drum d = new drum();
         d.play();
+        ukulele u = new ukulele();
+        u.play();
     }
 }
 
