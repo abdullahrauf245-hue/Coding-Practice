@@ -15,6 +15,12 @@ public class InterfacePolymorphism {
         }
     }
 
+    static class violin implements Playable {
+        public void play() {
+            System.out.println("Playing the Violin!");
+        }
+    }
+
     public static void main(String[] args) {
         Guitar g = new Guitar();
         g.play();
@@ -22,5 +28,8 @@ public class InterfacePolymorphism {
         piano p = new piano();
         p.play();
 
+        violin v = new violin();
+        v.play();
     }
 }
+
