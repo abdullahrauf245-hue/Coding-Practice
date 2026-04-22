@@ -1,15 +1,15 @@
-public class Student {
+class StudentDefaultsDemo {
     int age;
     double gpa;
     boolean passed;
     String name;
 
-    Student() {
+    StudentDefaultsDemo() {
         // no assignments
     }
 
     public static void main(String[] args) {
-        Student s = new Student();
+        StudentDefaultsDemo s = new StudentDefaultsDemo();
         System.out.println(s.age);     // 0
         System.out.println(s.gpa);     // 0.0
         System.out.println(s.passed);  // false

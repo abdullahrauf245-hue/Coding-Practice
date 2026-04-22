@@ -15,7 +15,7 @@ class Dog extends Animal {
     }
 }
 
-public class Main {
+class MainPractice {
     public static void main(String[] args) {
         Dog d = new Dog("Buddy", "Golden Retriever");
         System.out.println("Dog: " + d.name + " is a " + d.breed);
