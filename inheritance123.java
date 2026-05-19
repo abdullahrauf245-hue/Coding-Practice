@@ -124,6 +124,9 @@ public class inheritance123 {
         Student student1 = obj.new Student("John Doe", "123 Main St", "555-1234", "john.doe@example.com", "Full-time ");  
         System.out.println(student1);
 
+        Staff staff1 = obj.new Staff("Alice Johnson", "789 Oak St", "555-9012", "alice.johnson@example.com", "Building B", 45000.0, new Date(), "Administrative Assistant");
+        System.out.println(staff1);
+
         Employee employee1 = obj.new Employee("Jane Smith", "456 Elm St", "555-5678", "jane.smith@example.com", "Building A", 50000.0, new Date());
         System.out.println(employee1);
     }
